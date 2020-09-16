@@ -33,7 +33,7 @@ public class Web99guru extends PageObject{
     @FindBy(name = "name")
     private WebElement customer_name;
 
-    @FindBy(xpath = "/html/body/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input[2]")
+    @FindBy(xpath = "//input[@value='f']") //artinya adalah mengambil semua jenis input di halaman tersebut yang valuenya 'f'
     private WebElement customer_gender;
 
     @FindBy(id = "dob")
@@ -60,7 +60,7 @@ public class Web99guru extends PageObject{
     @FindBy(name = "password")
     private WebElement customer_password;
 
-    @FindBy(xpath = "/html/body/table/tbody/tr/td/table/tbody/tr[14]/td[2]/input[1]")
+    @FindBy(xpath = "//input[@value='Submit']")
     private WebElement button_submit;
 
     public Web99guru(WebDriver driver) {

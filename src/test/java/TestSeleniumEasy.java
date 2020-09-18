@@ -20,24 +20,18 @@ public class TestSeleniumEasy {
         WebSeleniumEasy webForm = new WebSeleniumEasy(driver);
         driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
         webForm.closePopuP();
+        webForm.checkExpectedTitle();
+        Assert.assertTrue(webForm.assertTitle());
         webForm.enterUserMessage();
+        Assert.assertTrue(webForm.assertButtonSubmit());
         webForm.clickButtonSubmit();
-        System.out.println("Hasil yang didapat:");
-        System.out.println(webForm.Expected_user_msg);
+        webForm.Validationusermsg();
         Assert.assertTrue(webForm.EkpectedUserMsg());
-        System.out.println("----------------");
-        System.out.println("Hasil yang diharapkan");
-        System.out.println(webForm.USER_MSG);
-        System.out.println("Assert berhasil");
         webForm.enterinput1();
         webForm.enterinput2();
         webForm.enterButtonGetTotal();
-        System.out.println("Hasil yang didapat:");
-        System.out.println(webForm.totalpenjumlahan);
-        System.out.println("---------");
-        System.out.println("Hasil yang diharapkan:");
-        System.out.println(webForm.JUMLAH);
-        Assert.assertTrue(webForm.cekHasilPenjumlahan());
-        System.out.println("Assert Berhasil");
+        webForm.ValidationGetTotal();
+        Assert.assertTrue(webForm.checkSum());
+        System.out.println("---- SUCCESS ----");
     }
 }

@@ -29,14 +29,35 @@ public class TestTokopedia {
 //        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         webForm.set_category();
         webForm.checkListPage();
-        Assert.assertTrue(webForm.assertListPage());
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        webForm.getTitleProduct();
         webForm.setProduct();
-        webForm.seter();
-//        webForm.setter(String this);
-//        webForm.Getter();
-//        webForm.validationProductDetail();
-//        Assert.assertTrue(webForm.assertProductDetail());
     }
+
+    @Test(testName = "Detail test")
+    public static void detailProduct(){
+        driver.get(Utils.BASE_URL_PRODUCT_DETAIL_TOKPED);
+        WebTokopedia webForm = new WebTokopedia(driver);
+        webForm.checkDetailProductTitle();
+        Assert.assertTrue(webForm.assertTitleProductDetail());
+        webForm.setQty();
+        webForm.validationPrice();
+        Assert.assertTrue(webForm.assertTotalPrice());
+    }
+
+    @Test(testName = "Cek setter getter")
+    public static void homepageToProductDetail(){
+        driver.get(Utils.BASE_URL_TOKOPEDIA);
+        WebTokped2 webForm = new WebTokped2(driver);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        webForm.setProduct1();
+        System.out.println("lolos 1");
+//        webForm.getTitle();
+//        webForm.setTitle("dob");
+//        webForm.titleHome;
+        webForm.setTitle(webForm.titleProductHome.getText());
+        System.out.println("lolos 2");
+        webForm.setProduct2();
+        webForm.titleDetail();
+//        webForm.setTitle();
+    }
+
 }

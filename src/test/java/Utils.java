@@ -6,6 +6,7 @@ public class Utils {
     final static String BASE_URL_SELENIUM = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
     final static String BASE_URL_SELENIUM_DATEPICKER = "https://www.seleniumeasy.com/test/bootstrap-date-picker-demo.html";
     final static String BASE_URL_TOKOPEDIA = "https://www.tokopedia.com/";
+    final static String BASE_URL_PRODUCT_DETAIL_TOKPED = "https://www.tokopedia.com/cubbystore/my-bottle-bening-kotak-botol-minum-botol-unik";
     final static String CHROME_DRIVER_LOCATION = "chromedriver.exe";
 //    final static String CHROME_DRIVER_LOCATION = "C:\\Users\\user\\Documents\\Program Master\\chromedriver_win32\\chromedriver.exe";
 }
